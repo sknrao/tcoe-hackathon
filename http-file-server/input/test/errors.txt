@@ -1,0 +1,11 @@
+[ERROR] Failures: 
+[ERROR]   FileCollectorTest.whenFtpesFileAlwaysFail_failWithoutRetry:383 expectation "expectErrorMessage" failed (expected: onError("Non retryable file transfer failure"); actual: onNext(org.oran.datafile.model.FilePublishInformation@77a11de7))
+[ERROR]   FileCollectorTest.whenFtpesFileAlwaysFail_retryAndFail:363 expectation "expectErrorMessage" failed (expected: onError("Retries exhausted: 3/3"); actual: onNext(org.oran.datafile.model.FilePublishInformation@77a11de7))
+[ERROR]   FileCollectorTest.whenFtpesFileFailOnce_retryAndReturnCorrectResponse:406 expectation "expectNext(org.oran.datafile.model.FilePublishInformation@46d60040)" failed (expected value: org.oran.datafile.model.FilePublishInformation@46d60040; actual value: org.oran.datafile.model.FilePublishInformation@77a11de7)
+[ERROR]   FileCollectorTest.whenFtpesFile_returnCorrectResponse:247 expectation "expectNext(org.oran.datafile.model.FilePublishInformation@46d60040)" failed (expected value: org.oran.datafile.model.FilePublishInformation@46d60040; actual value: org.oran.datafile.model.FilePublishInformation@77a11de7)
+[ERROR]   FileCollectorTest.whenHttpFile_returnCorrectResponse:300 expectation "expectNext(org.oran.datafile.model.FilePublishInformation@46d60040)" failed (expected value: org.oran.datafile.model.FilePublishInformation@46d60040; actual value: org.oran.datafile.model.FilePublishInformation@77a11de7)
+[ERROR]   FileCollectorTest.whenHttpsFile_returnCorrectResponse:332 expectation "expectNext(org.oran.datafile.model.FilePublishInformation@46d60040)" failed (expected value: org.oran.datafile.model.FilePublishInformation@46d60040; actual value: org.oran.datafile.model.FilePublishInformation@77a11de7)
+[ERROR]   FileCollectorTest.whenSftpFile_returnCorrectResponse:270 expectation "expectNext(org.oran.datafile.model.FilePublishInformation@46d60040)" failed (expected value: org.oran.datafile.model.FilePublishInformation@46d60040; actual value: org.oran.datafile.model.FilePublishInformation@77a11de7)
+[INFO] 
+[ERROR] Tests run: 168, Failures: 7, Errors: 0, Skipped: 0
+
