@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<html lang="en" dir="ltr">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport"
+				content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<meta name="description" content="Simple file server">
+			
+			<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+			<title>Directory listing for /</title>
+			<style>
+				tbody tr:nth-child(odd) {
+					background-color: #eeeeee;
+			  	}
+				@media (min-width:960px) { 
+					.upload-form {
+						max-width: 40%;
+					}
+				}
+			</style>
+		</head>
+		<body>
+		<h2>Directory listing for /</h2>
+		<p>
+			<form enctype="multipart/form-data"
+				action="/upload"
+				method="POST"
+				class="upload-form">
+				<fieldset>
+					<legend>Upload new file/files</legend>
+					<input type="hidden" id="directory" type="text" name="directory" value="/">
+					<input type="file" placeholder="Filename" name="file-upload" required multiple>
+					<button type="submit">Upload</button>
+				</fieldset>
+			</form>
+		</p>
+		
+			<p></p>
+		
+		<p>
+		<table>
+			<thead>
+				<tr>
+					<th>Filename</th>
+					<th>Size</th>
+					<th>Mode</th>
+					<th>Last Modified</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					<tr>
+						<td>
+							
+								
+									<a download href="/get?file=go-fileserver-master.zip">go-fileserver-master.zip</a>
+									
+								
+							
+						</td>
+						<td>103.2K</td>
+						<td>-rw-rw-r--</td>
+						<td>Thu Sep 26 11:32:04 UTC 2024</td>
+						<td>
+							<form action="/delete" method="POST" class="form-example">
+								<div>
+									<input type="hidden" id="directory" type="text" name="directory" value="/">
+									<input type="hidden" id="file" type="file" name="filename" value="go-fileserver-master.zip">
+									<input type="submit" onclick="return confirm('Are you sure you want to delete go-fileserver-master.zip?')" value="Delete">
+								</div>
+							</form>
+					  </td>
+					</tr>
+				
+					<tr>
+						<td>
+							
+								
+									<a download href="/get?file=influxd.bolt">influxd.bolt</a>
+									
+								
+							
+						</td>
+						<td>64.0K</td>
+						<td>-rw-rw-r--</td>
+						<td>Thu Sep 26 11:32:04 UTC 2024</td>
+						<td>
+							<form action="/delete" method="POST" class="form-example">
+								<div>
+									<input type="hidden" id="directory" type="text" name="directory" value="/">
+									<input type="hidden" id="file" type="file" name="filename" value="influxd.bolt">
+									<input type="submit" onclick="return confirm('Are you sure you want to delete influxd.bolt?')" value="Delete">
+								</div>
+							</form>
+					  </td>
+					</tr>
+				
+					<tr>
+						<td>
+							
+								
+									<a href="/view?dir=test">test/</a>
+								
+							
+						</td>
+						<td>4.0K</td>
+						<td>drwxrwxr-x</td>
+						<td>Thu Sep 26 11:32:04 UTC 2024</td>
+						<td>
+							<form action="/delete" method="POST" class="form-example">
+								<div>
+									<input type="hidden" id="directory" type="text" name="directory" value="/">
+									<input type="hidden" id="file" type="file" name="filename" value="test">
+									<input type="submit" onclick="return confirm('Are you sure you want to delete test?')" value="Delete">
+								</div>
+							</form>
+					  </td>
+					</tr>
+				
+			</tbody>
+		</table>
+		</p>
+		</body>
+	</html>

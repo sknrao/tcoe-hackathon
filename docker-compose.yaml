@@ -15,7 +15,7 @@ services:
       retries: 3
     restart: always
     ports:
-      - 80:80
+      - 8000:8000
       - 443:443
       - 4334:4334
       - 4335:4335
