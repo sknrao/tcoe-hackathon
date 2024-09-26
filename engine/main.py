@@ -14,6 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 import docker
 from minio import Minio
+from flask import Flask, render_template, request, jsonify
 
 __version__ = 0.1
 __updated__ = '2024-09-24'
@@ -38,6 +39,15 @@ containers = {'nlp': None,
               'autoencoders': None
              }
 
+app = Flask(__name__)
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"message": "API is healthy!"})
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 def put_object(bucket, filepath, anon):
     global minio_client
@@ -130,8 +140,12 @@ def is_container_running(container_name):
 #         return None
 
 container_mapping = {'ip': 'classic', 'nlp': 'nlp', 'ae': 'autoencoders'}
-    
-def download_file_from_http(file_path):
+
+@app.route('/run_function', methods=['POST'])    
+def download_file_from_http():
+    data = request.get_json()
+    file_path = data.get('search', '')
+    # print(file_path)
     global logger
     url = f"{root_url}{file_path}"
     try:
@@ -302,8 +316,8 @@ def main(argv=None):
         global minio_client
         docker_client = docker.DockerClient(base_url='unix:///var/run/docker.sock')
         minio_client = Minio("localhost:9000", 
-                             access_key = "YEy56YZjGCuUNcNYh1UM",
-                             secret_key = "aJd4M5ed3D1J4R2LoEV8vsFkgzQiszi4dXkE86RV",
+                             access_key = "admin",
+                             secret_key = "adminadmin",
                              secure=False)
         setup_minio_buckets()
         put_object("input",
@@ -340,6 +354,7 @@ def main(argv=None):
 # ------------------------------------------------------------------------------
 
 if __name__ == '__main__':      # pragma: no cover
+    app.run(debug=True, host='0.0.0.0', port=8003)
     # --------------------------------------------------------------------------
     # Normal operation - call through to the main function.
     # --------------------------------------------------------------------------
