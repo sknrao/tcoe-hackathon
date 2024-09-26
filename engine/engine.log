@@ -1,0 +1,105 @@
+2024-09-26 18:09:21.%f +0000 monitor - INFO - Started
+2024-09-26 18:09:21.%f +0000 monitor - CRITICAL - Exiting because of exception: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8DDA5D222FADB, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+2024-09-26 18:09:21.%f +0000 monitor - CRITICAL - Traceback (most recent call last):
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 530, in main
+    setup_minio_buckets()
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 395, in setup_minio_buckets
+    found = minio_client.bucket_exists(bucket_name)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 696, in bucket_exists
+    self._execute("HEAD", bucket_name)
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 437, in _execute
+    region = self._get_region(bucket_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 494, in _get_region
+    response = self._url_open(
+               ^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 423, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8DDA5D222FADB, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+
+2024-09-26 18:13:44.%f +0000 monitor - INFO - Started
+2024-09-26 18:13:44.%f +0000 monitor - CRITICAL - Exiting because of exception: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8DDE32DBA9E51, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+2024-09-26 18:13:44.%f +0000 monitor - CRITICAL - Traceback (most recent call last):
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 530, in main
+    setup_minio_buckets()
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 395, in setup_minio_buckets
+    found = minio_client.bucket_exists(bucket_name)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 696, in bucket_exists
+    self._execute("HEAD", bucket_name)
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 437, in _execute
+    region = self._get_region(bucket_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 494, in _get_region
+    response = self._url_open(
+               ^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 423, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8DDE32DBA9E51, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+
+2024-09-26 18:14:16.%f +0000 monitor - INFO - Started
+2024-09-26 18:14:16.%f +0000 monitor - CRITICAL - Exiting because of exception: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8DDEA9EA30A71, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+2024-09-26 18:14:16.%f +0000 monitor - CRITICAL - Traceback (most recent call last):
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 530, in main
+    setup_minio_buckets()
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 395, in setup_minio_buckets
+    found = minio_client.bucket_exists(bucket_name)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 696, in bucket_exists
+    self._execute("HEAD", bucket_name)
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 437, in _execute
+    region = self._get_region(bucket_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 494, in _get_region
+    response = self._url_open(
+               ^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 423, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8DDEA9EA30A71, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+
+2024-09-26 18:16:30.%f +0000 monitor - INFO - Started
+2024-09-26 18:23:06.%f +0000 monitor - INFO - Started
+2024-09-26 18:23:06.%f +0000 monitor - CRITICAL - Exiting because of exception: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8DE65D8860949, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+2024-09-26 18:23:06.%f +0000 monitor - CRITICAL - Traceback (most recent call last):
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 684, in main
+    setup_minio_buckets()
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 571, in setup_minio_buckets
+    found = minio_client.bucket_exists(bucket_name)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 696, in bucket_exists
+    self._execute("HEAD", bucket_name)
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 437, in _execute
+    region = self._get_region(bucket_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 494, in _get_region
+    response = self._url_open(
+               ^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 423, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8DE65D8860949, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+
+2024-09-26 18:24:57.%f +0000 monitor - INFO - Started
+2024-09-26 19:02:50.%f +0000 monitor - INFO - Started
+2024-09-26 19:09:55.%f +0000 monitor - INFO - Started
+2024-09-26 19:09:55.%f +0000 monitor - CRITICAL - Exiting because of exception: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8E0F3EF469D39, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+2024-09-26 19:09:55.%f +0000 monitor - CRITICAL - Traceback (most recent call last):
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 852, in main
+    setup_minio_buckets()
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 731, in setup_minio_buckets
+    found = minio_client.bucket_exists(bucket_name)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 696, in bucket_exists
+    self._execute("HEAD", bucket_name)
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 437, in _execute
+    region = self._get_region(bucket_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 494, in _get_region
+    response = self._url_open(
+               ^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 423, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8E0F3EF469D39, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+
+2024-09-26 19:10:39.%f +0000 monitor - INFO - Started
+2024-09-26 19:15:01.%f +0000 monitor - INFO - Started

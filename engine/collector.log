@@ -94,3 +94,25 @@ minio.error.S3Error: S3 operation failed; code: AccessDenied, message: Access de
 2024-09-25 22:38:40.%f +0530 monitor - INFO - Started
 2024-09-25 22:39:35.%f +0530 monitor - INFO - Started
 2024-09-25 22:50:00.%f +0530 monitor - INFO - Started
+2024-09-27 01:12:36.%f +0530 monitor - INFO - Started
+2024-09-27 01:12:36.%f +0530 monitor - CRITICAL - Exiting because of exception: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8E2BCA7BFB2C0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+2024-09-27 01:12:36.%f +0530 monitor - CRITICAL - Traceback (most recent call last):
+  File "/home/shashank/Desktop/hack/tcoe-hackathon/engine/main.py", line 318, in main
+    setup_minio_buckets()
+  File "/home/shashank/Desktop/hack/tcoe-hackathon/engine/main.py", line 65, in setup_minio_buckets
+    found = minio_client.bucket_exists("input")
+  File "/home/shashank/.local/lib/python3.10/site-packages/minio/api.py", line 696, in bucket_exists
+    self._execute("HEAD", bucket_name)
+  File "/home/shashank/.local/lib/python3.10/site-packages/minio/api.py", line 437, in _execute
+    region = self._get_region(bucket_name)
+  File "/home/shashank/.local/lib/python3.10/site-packages/minio/api.py", line 494, in _get_region
+    response = self._url_open(
+  File "/home/shashank/.local/lib/python3.10/site-packages/minio/api.py", line 423, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The Access Key Id you provided does not exist in our records., resource: /input, request_id: 17F8E2BCA7BFB2C0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+
+2024-09-27 01:13:46.%f +0530 monitor - INFO - Started
+2024-09-27 01:16:09.%f +0530 monitor - INFO - Started
+2024-09-27 01:16:09.%f +0530 monitor - INFO - Started
+2024-09-27 01:35:27.%f +0530 monitor - INFO - Started
+2024-09-27 01:35:27.%f +0530 monitor - INFO - Started
