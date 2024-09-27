@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google</title>
+    <title>Thoth</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/thoth.jpg') }}">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         <div class="main">
             <img src="../static/images/thoth.jpg" alt="">
             <div class="searchBox">
-                <input type="text" class="search" id="searchInput" placeholder="Type your search here...">
+                <input type="text" class="search" id="searchInput" placeholder="Type your file path here...">
                 <div class="icons">
                     <div>
                         <img src="../static/images/search.png" alt="">
@@ -43,11 +44,11 @@
                 </div>
             </div>
             <div class="buttons">
-                <button id="runButton">Google Search</button>
-                <button>I'm Feeling Lucky</button>
+                <button id="runButton">Anonymize</button>
+                <a href="https://lf-anuket.atlassian.net/wiki/spaces/HOME/pages/21887905/Thoth"><button>I'm Feeling Lucky</button></a>
             </div>
             <div id="result"></div>
-            <ul class="languages">
+            <!-- <ul class="languages">
                 <li>Google offered in:</li>
                 <li>
                     <a href="">हिन्दी</a>
@@ -78,7 +79,7 @@
                     <a href="">ਪੰਜਾਬੀ</a>
                 </li>
 
-            </ul>
+            </ul> -->
         </div>
         <div class="footer">
             <div class="row row1">
@@ -89,7 +90,7 @@
                     <li><a href="">About</a></li>
                     <li><a href="">Advertising</a></li>
                     <li><a href="">Business</a></li>
-                    <li><a href="">How Search works</a></li>
+                    <li><a href="">How Anonymization works</a></li>
 
 
                 </ul>
@@ -102,8 +103,7 @@
         </div>
     </section>
     <script>
-        document.getElementById("runButton").onclick = function() {
-            // Get the value from the search input
+        function executeSearch() {
             const searchText = document.getElementById("searchInput").value;
     
             fetch('/run_function', {
@@ -111,15 +111,28 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ search: searchText }) // Send the search text in the request body
+                body: JSON.stringify({ search: searchText })
             })
             .then(response => response.json())
             .then(data => {
                 document.getElementById("result").innerText = data.result;
             })
             .catch(error => console.error('Error:', error));
+        }
+    
+        // Trigger search on button click
+        document.getElementById("runButton").onclick = function() {
+            executeSearch();
         };
+    
+        // Trigger search on Enter key press
+        document.getElementById("searchInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                executeSearch();
+            }
+        });
     </script>
+    
 </body>
 
 </html>
