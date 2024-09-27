@@ -98,6 +98,24 @@ section .main .buttons {
     margin-top: 20px;
 }
 
+#logo{
+    width: 60px;
+    height: 40px;
+    margin-top: 0px;
+}
+#hiddenButton {
+    margin: 0 5px;
+    padding: 12px 20px;
+    color: #3c4043;
+    background: #f8f9fa;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+    display: none;
+  }
 section .main .buttons button {
     margin: 0 5px;
     padding: 12px 20px;

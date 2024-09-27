@@ -103,3 +103,73 @@ minio.error.S3Error: S3 operation failed; code: InvalidAccessKeyId, message: The
 
 2024-09-26 19:10:39.%f +0000 monitor - INFO - Started
 2024-09-26 19:15:01.%f +0000 monitor - INFO - Started
+2024-09-26 20:58:48.%f +0000 monitor - INFO - Started
+2024-09-26 21:10:15.%f +0000 monitor - INFO - Started
+2024-09-26 21:10:16.%f +0000 monitor - INFO - Started
+2024-09-26 21:13:15.%f +0000 monitor - INFO - Started
+2024-09-26 21:13:19.%f +0000 monitor - INFO - Started
+2024-09-26 21:13:20.%f +0000 monitor - INFO - Started
+2024-09-26 21:15:58.%f +0000 monitor - INFO - Started
+2024-09-26 21:15:58.%f +0000 monitor - CRITICAL - Exiting because of exception: S3 operation failed; code: SignatureDoesNotMatch, message: The request signature we calculated does not match the signature you provided. Check your key and signing method., resource: /input, request_id: 17F8E7D4D3F0A6A0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+2024-09-26 21:15:58.%f +0000 monitor - CRITICAL - Traceback (most recent call last):
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 1173, in main
+    setup_minio_buckets()
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/engine/main.py", line 964, in setup_minio_buckets
+    found = minio_client.bucket_exists("input")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 696, in bucket_exists
+    self._execute("HEAD", bucket_name)
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 437, in _execute
+    region = self._get_region(bucket_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 494, in _get_region
+    response = self._url_open(
+               ^^^^^^^^^^^^^^^
+  File "/home/TeAmP0is0N/hackathon/tcoe-hackathon/hackathon/lib/python3.11/site-packages/minio/api.py", line 423, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: SignatureDoesNotMatch, message: The request signature we calculated does not match the signature you provided. Check your key and signing method., resource: /input, request_id: 17F8E7D4D3F0A6A0, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: input
+
+2024-09-26 21:16:19.%f +0000 monitor - INFO - Started
+2024-09-26 21:16:20.%f +0000 monitor - INFO - Started
+2024-09-26 21:25:25.%f +0000 monitor - INFO - Started
+2024-09-26 21:25:25.%f +0000 monitor - INFO - Started
+2024-09-26 22:10:31.%f +0000 monitor - INFO - Started
+2024-09-26 22:10:31.%f +0000 monitor - INFO - Started
+2024-09-27 02:28:25.%f +0000 monitor - INFO - Started
+2024-09-27 02:28:26.%f +0000 monitor - INFO - Started
+2024-09-27 02:57:08.%f +0000 monitor - INFO - Started
+2024-09-27 02:57:08.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 02:57:08.%f +0000 monitor - INFO - Started
+2024-09-27 02:57:08.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:08:49.%f +0000 monitor - INFO - Started
+2024-09-27 03:08:49.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:08:50.%f +0000 monitor - INFO - Started
+2024-09-27 03:08:50.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:17:35.%f +0000 monitor - INFO - Started
+2024-09-27 03:17:35.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:17:36.%f +0000 monitor - INFO - Started
+2024-09-27 03:17:36.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:23:51.%f +0000 monitor - INFO - Started
+2024-09-27 03:23:51.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:25:02.%f +0000 monitor - INFO - Started
+2024-09-27 03:25:02.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:29:30.%f +0000 monitor - INFO - Started
+2024-09-27 03:29:30.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:36:58.%f +0000 monitor - INFO - Started
+2024-09-27 03:36:58.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:37:02.%f +0000 monitor - INFO - Started
+2024-09-27 03:37:02.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:45:39.%f +0000 monitor - INFO - Started
+2024-09-27 03:45:39.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:50:52.%f +0000 monitor - INFO - Started
+2024-09-27 03:50:52.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:53:56.%f +0000 monitor - INFO - Started
+2024-09-27 03:53:56.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:53:56.%f +0000 monitor - INFO - Started
+2024-09-27 03:53:56.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:54:53.%f +0000 monitor - INFO - Started
+2024-09-27 03:54:53.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:54:54.%f +0000 monitor - INFO - Started
+2024-09-27 03:54:54.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.
+2024-09-27 03:58:53.%f +0000 monitor - INFO - Started
+2024-09-27 03:58:53.%f +0000 monitor - INFO - MinIO clients and buckets set up successfully.

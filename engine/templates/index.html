@@ -13,17 +13,18 @@
     <section>
         <header>
             <ul>
-                <li>
+                <!-- <li>
                     <a href="">Gmail</a>
                 </li>
                 <li>
                     <a href="">Images</a>
-                </li>
+                </li> -->
                 <li>
                     <a href=""><img src="../static/images/menuIcon.png" alt=""></a>
                 </li>
                 <li>
-                    <button>Sign In</button>
+                    <!-- <button>Sign In</button> -->
+                     <img src="../static/images/telecloak.png" alt="" id="logo">
                 </li>
             </ul>
         </header>
@@ -45,41 +46,9 @@
             </div>
             <div class="buttons">
                 <button id="runButton">Anonymize</button>
-                <a href="https://lf-anuket.atlassian.net/wiki/spaces/HOME/pages/21887905/Thoth"><button>I'm Feeling Lucky</button></a>
+                <a href="http://10.200.106.49:9001/browser/output" target="blank"><button id="hiddenButton">View Anonymized Data</button></a>
             </div>
             <div id="result"></div>
-            <!-- <ul class="languages">
-                <li>Google offered in:</li>
-                <li>
-                    <a href="">हिन्दी</a>
-                </li>
-                <li>
-                    <a href="">বাংলা</a>
-                </li>
-                <li>
-                    <a href="">తెలుగు</a>
-                </li>
-                <li>
-                    <a href="">मराठी
-                    </a>
-                </li>
-                <li>
-                    <a href="">தமிழ்</a>
-                </li>
-                <li>
-                    <a href="">ગુજરાતી</a>
-                </li>
-                <li>
-                    <a href="">ಕನ್ನಡ</a>
-                </li>
-                <li>
-                    <a href="">മലയാളം</a>
-                </li>
-                <li>
-                    <a href="">ਪੰਜਾਬੀ</a>
-                </li>
-
-            </ul> -->
         </div>
         <div class="footer">
             <div class="row row1">
@@ -122,6 +91,7 @@
     
         // Trigger search on button click
         document.getElementById("runButton").onclick = function() {
+            alert("Anonymization may take some time, Please be patient");
             executeSearch();
         };
     
@@ -129,6 +99,19 @@
         document.getElementById("searchInput").addEventListener("keydown", function(event) {
             if (event.key === "Enter") {
                 executeSearch();
+            }
+        });
+
+        const hiddenButton = document.getElementById('hiddenButton');
+
+        // Add an event listener to showButton
+        document.getElementById('runButton').addEventListener('click', function() {
+        hiddenButton.style.display = 'inline';  // Show the hidden button when clicked
+        });
+
+        document.getElementById("searchInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                hiddenButton.style.display = 'inline';
             }
         });
     </script>
